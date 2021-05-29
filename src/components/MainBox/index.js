@@ -35,8 +35,8 @@ const MainBox = () => {
   return (
     <React.Fragment>
       <main className="main">
-        <div className="input-form">
-          <form>
+        <div className="input-form row">
+          <form class="col-sm-12 col-md-6">
             <div className="form-group">
               <InputRange
                 maxValue={5000}
@@ -44,7 +44,7 @@ const MainBox = () => {
                 step={100}
                 value={state.amount}
                 onChange={(amount) => setstate({ ...state, amount })}
-                formatLabel={(val) => `${val} руб`}
+                formatLabel={(val) => `${val} $`}
               />
 
               <label>Сумма кредита</label>
@@ -59,19 +59,19 @@ const MainBox = () => {
               <label>Срок кредита в месяцах</label>
             </div>
           </form>
-          <div className="current-status">
+          <div className="current-status col-sm-12 col-md-6">
             <h4>Параметры кредита</h4>
-            <div className="row">
-              <div className="col-2"> Годовая ставка, % </div>
-              <div className="col-2"> {`${state.interestRate}`} </div>
+            <div className="row2">
+              <div className="col2"> Годовая ставка, % </div>
+              <div className="col2"> {`${state.interestRate}`} </div>
             </div>
-            <div className="row">
-              <div className="col-2"> Месячный платёж, руб </div>
-              <div className="col-2"> {`${state.monthlyPayment}`} </div>
+            <div className="row2">
+              <div className="col2"> Месячный платёж, $ </div>
+              <div className="col2"> {`${state.monthlyPayment}`} </div>
             </div>
-            <div className="row">
-              <div className="col-2"> Количество платежей </div>
-              <div className="col-2"> {state.numPayments} </div>
+            <div className="row2">
+              <div className="col2"> Количество платежей </div>
+              <div className="col2"> {state.numPayments} </div>
             </div>
           </div>
         </div>

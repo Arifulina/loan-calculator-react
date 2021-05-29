@@ -1,8 +1,8 @@
-.row {
+.row2 {
     width: 100%;
     float: left;
     display: block;
-    .col-2 {
+    .col2 {
         float: left;
         width: 50%;
         &:last-child {
@@ -12,17 +12,17 @@
 }
 
 .main {
+    min-width: 290px;
     width: 60%;
     height: 100%;
     background: #fff;
-    display: flex;
+    margin: 0 auto;
     align-items: center;
     justify-content: center;
     .input-form {
-        width: 60%;
-        padding-top: 30px;
-        min-height: 400px;
-        min-width: 400px;
+        // width: 60%;
+        padding: 30px;
+        min-width: 320px;
         border-radius: 10px;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
         .form-group {
@@ -39,12 +39,10 @@
             margin-bottom: 20px;
         }
         .current-status {
-            width: 100%;
             padding: 20px;
             background: linear-gradient(90deg, #1c819e 0%, #17aed9 94.32%);
-            display: block;
+            display: inline-block;
             color: #fff;
-            float: left;
             border-radius: 8px;
             .row {
                 font-weight: 600;
